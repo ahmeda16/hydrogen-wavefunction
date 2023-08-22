@@ -11,7 +11,7 @@ Arguments: (int) l - Angular Momentum Quantum Number, the subshell or angular de
            (int) phi - Azimuth Angle Coordinate, from a given polar/spherical coordinate. 
            
            *Note, that we only analyize the REAL portion of the complex spherical harmonic equation
-
+           *Note, ml is defined to be a integer in Physics, we may consider the negative here due it its boundary conditions
 Output: A numpy array of the angular contribution (spherical harmonics) of the wavefunction
 """
 def angular_Contribution(l, ml, theta, phi):
