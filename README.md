@@ -9,7 +9,6 @@ Python (3.11.2 64-bit) was the main method behind the plot file and makes use of
 * NumPY (1.24.3)
 * SciPY (1.11.2)
 * Matplotlib (3.7.2)
-* Seaborn (0.12.2)
 
 ### 1.2 Basis Knowledge
 As the topic of the electron cloud density is complex to calculate, a foundation in Multivariable Calculus, the general idea of Quantum Mechanics, and knowledge of Laugerre Polynomials/Legendre Polynomials would be beneficial. However, I will try my best to explain the process.
