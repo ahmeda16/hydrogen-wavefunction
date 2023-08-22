@@ -2,7 +2,6 @@ import numpy as np
 import scipy as sp
 import matplotlib as mpl
 import seaborn as sb
-import math
 
 """ Computes the Radial Contribution of the Wavefunction Using Exponential Decay, Laguerre Polynomials, and Power Term
 
@@ -14,7 +13,7 @@ Output: A numpy array of the radial contribution to the wavefunction
 """
 def radial_Contribution(n, l, r):
     
-    e = math.e
+    e = np.e
     a0 = sp.constants.physical_constants["Bohr radius"][0] * 1e+12
     z = 2 / (n * a0)
 
