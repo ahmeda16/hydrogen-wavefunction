@@ -12,7 +12,7 @@ Python (3.11.2 64-bit) was the main method behind the plot file and makes use of
 * Seaborn (0.12.2)
 
 ### 1.2 Basis Knowledge
-As the topic of the electron cloud density is complex to calculate, a foundation in Multivariable Calculus, the general idea of Quantum Mechanics, and knowledge of Laugerre Polynomials would be beneficial. However, I will try my best to explain the process.
+As the topic of the electron cloud density is complex to calculate, a foundation in Multivariable Calculus, the general idea of Quantum Mechanics, and knowledge of Laugerre Polynomials/Legendre Polynomials would be beneficial. However, I will try my best to explain the process.
 
 
 ## 2. Foundation Explanation
