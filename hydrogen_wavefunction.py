@@ -7,7 +7,7 @@ import seaborn as sb
 
 Arguments: (int) n - Principal Quantum Number, the energy level or shell. (r in spherical coordinates)
            (int) l - Angular Momentum Quantum Number, the subshell or angular dependence of the orbital. (Θ in spherical coordinates)
-           (numpy array) r - Radial Coordinate, from a given polar/spherical coordinate. 
+           (numpy array) r - Variable Radius Coordinate for seaborn plot 
            
 Output: A numpy array of the radial contribution to the wavefunction
 """
@@ -17,10 +17,10 @@ def radial_Contribution(n, l, r):
     a0 = sp.constants.physical_constants["Bohr radius"][0] * 1e+12
     z = 2 / (n * a0)
 
-    squareRootTerm = (-1) * np.sqrt(
-                                   (z ** 3) *
-                                   ((np.math.factorial(n - l - 1)) / (2 * n * (np.math.factorial(n + l))))
-                                   )
+    squareRootTerm = np.sqrt(
+                            (z ** 3) *
+                            ((np.math.factorial(n - l - 1)) / (2 * n * (np.math.factorial(n + l))))
+                            )
     
     powerOfLTerm = (z * r) ** l
 
@@ -37,12 +37,12 @@ Arguments: (int) l - Angular Momentum Quantum Number, the subshell or angular de
            (numpy array) theta - Polar Angle Coordinate, from a given polar/spherical coordinate. 
            (int) phi - Azimuth Angle Coordinate, from a given polar/spherical coordinate. 
            
-           *Note, that we only analyize the REAL portion of the complex spherical harmonic equation
-           *Note, ml is defined to be a integer in Physics, we may consider the negative here due it its boundary conditions
+           *Note, that we only analyize the REAL portion (np.real) of the complex spherical harmonic equation as it ascertains the physical probabilities.
+           *Note, if we are looking for the probability densities, will be considered 0 later on since this will envision a top down view of the orbitals in the main plot.
+           
 Output: A numpy array of the angular contribution (spherical harmonics) of the wavefunction
 """
 def angular_Contribution(l, ml, theta, phi):
-
 
     e = np.e
     pi = np.pi
@@ -59,3 +59,4 @@ def angular_Contribution(l, ml, theta, phi):
     decayTerm = np.real(np.exp(1j * ml * phi))
 
     return negPosTerm * sqaureRootTerm * legendreTerm * decayTerm
+    
