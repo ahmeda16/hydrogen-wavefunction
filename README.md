@@ -48,7 +48,7 @@ If you already have the basis knowledge down you may skip this section as it is 
 
 ### 3.2 Schrödinger Equation for the Hydrogen Wavefunction (Time Independant)
 
-### $$\psi_{(n,ℓ,mℓ)} = R_{n,ℓ}(r)\times Y_{ℓ,mℓ}(\theta,\phi)$$
+### $$\psi_{(n,ℓ,m_ℓ)} = R_{n,ℓ}(r)\times Y_{ℓ,m_ℓ}(\theta,\phi)$$
 
 #### 3.2.x Radial Contribution
 
@@ -56,8 +56,11 @@ If you already have the basis knowledge down you may skip this section as it is 
 
 #### 3.2.x Angular Contribution 
 
-#### $$Y_{(ℓ,mℓ)}(θ,ϕ) = (-1)^m \sqrt{\left(\frac{2ℓ+1}{4π}\right)\frac{(ℓ-m)!}{(ℓ+m)!}}P_{ℓ,mℓ}(cos(θ))e^{imϕ}$$
+#### $$Y_{ℓ}^{m_ℓ}(θ,ϕ) = (-1)^{m_ℓ} \sqrt{\left(\frac{2ℓ+1}{4π}\right)\frac{(ℓ-m_ℓ)!}{(ℓ+m_ℓ)!}}P_{ℓ}^{m_ℓ}(cos(θ))e^{im_ℓϕ}$$
 
 #### 3.2.x Probability Density
 
-#### $$P(r,\theta,\phi) = |\psi_{(n,ℓ,mℓ)}(r,\theta,\phi)|^2$$
+#### $$P(r,\theta,\phi) = |\psi_{(n,ℓ,m_ℓ)}(r,\theta,\phi)|^2$$
+
+## 4. References
+#### [1] Martin Fränzl, Universität Leipzig, Molecular Nanophotonics Group, "The Hydrogen Atom" https://home.uni-leipzig.de/~physik/sites/mona/wp-content/uploads/sites/3/2017/12/Hydrogen_Atom.pdf
