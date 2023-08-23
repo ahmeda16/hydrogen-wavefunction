@@ -1,13 +1,14 @@
 import numpy as np
 import scipy as sp
-import matplotlib as mpl
-import seaborn as sb
+from matplotlib import pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
 
 """ Computes the Radial Contribution of the Wavefunction Using Exponential Decay, Laguerre Polynomials, and Power Term
-
 Arguments: (int) n - Principal Quantum Number, the energy level or shell. (r in spherical coordinates)
            (int) l - Angular Momentum Quantum Number, the subshell or angular dependence of the orbital. (Θ in spherical coordinates)
            (numpy array) r - Variable Radius Coordinate for seaborn plot 
+           (numpy array) r - Variable Radius Coordinate for plot
            
 Output: A numpy array of the radial contribution to the wavefunction
 """
@@ -34,11 +35,8 @@ def radial_Contribution(n, l, r):
 
 Arguments: (int) l - Angular Momentum Quantum Number, the subshell or angular dependence of the orbital. (Θ in spherical coordinates)
            (int) ml - Magnetic Quantum Number, the orientation in space of an orbital (ϕ in spherical coordinates)
-           (numpy array) theta - Polar Angle Coordinate, from a given polar/spherical coordinate. 
-           (int) phi - Azimuth Angle Coordinate, from a given polar/spherical coordinate. 
-           
-           *Note, that we only analyize the REAL portion (np.real) of the complex spherical harmonic equation as it ascertains the physical probabilities.
-           *Note, if we are looking for the probability densities, will be considered 0 later on since this will envision a top down view of the orbitals in the main plot.
+           (numpy array) theta - Variable Polar Angle Coordinate for plot
+           (numpy array) phi - Variable Azimuth Angle Coordinate for plot
            
 Output: A numpy array of the angular contribution (spherical harmonics) of the wavefunction
 """
@@ -49,9 +47,11 @@ def angular_Contribution(l, ml, theta, phi):
 
     negPosTerm = (-1)**ml
 
+    #Needed to ensure calculation for -l
+    absML = np.abs(ml)
     sqaureRootTerm = np.sqrt(
                             (((2 * l) + 1)/(4 * pi)) *
-                            ((np.math.factorial(l - ml))/(np.math.factorial(l + ml)))
+                            ((np.math.factorial(l - absML))/(np.math.factorial(l + absML)))
                             )
     
     legendreTerm = sp.special.lpmv(ml, l, np.cos(theta))
