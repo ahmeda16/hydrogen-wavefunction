@@ -95,6 +95,6 @@ def main_Plot(P):
     plt.imshow(P, interpolation='none')
     plt.show()
 
-main_Plot(probability_Density(complex_Wave_Function(3,1,1)))
+main_Plot(probability_Density(complex_Wave_Function(2,1,1)))
 
     
