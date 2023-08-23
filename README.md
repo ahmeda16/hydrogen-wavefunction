@@ -65,3 +65,4 @@ If you already have the basis knowledge down you may skip this section as it is 
 ## 4. References
 #### [1] Martin Fränzl, Universität Leipzig, Molecular Nanophotonics Group, "The Hydrogen Atom" https://home.uni-leipzig.de/~physik/sites/mona/wp-content/uploads/sites/3/2017/12/Hydrogen_Atom.pdf
 #### [2] The University of Washington, Physics 441, "Radial Wave Functions from the Solution of the Radial Equation" https://faculty.washington.edu/seattle/physics441/ch10b.pdf
+#### [3] Wikipedia, "Vector Fields in Cylindrical Coordinates" https://en.wikipedia.org/wiki/Vector_fields_in_cylindrical_and_spherical_coordinates

@@ -3,14 +3,17 @@ import scipy as sp
 from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-""" Computes the Radial Contribution of the Wavefunction Using Exponential Decay, Laguerre Polynomials, and Power Term
+#GLOBAL CONSTANTS
+num_points = 680
+extent = 680
 
-Arguments: (int) n - Principal Quantum Number, the energy level or shell. (r in spherical coordinates)
-           (int) l - Angular Momentum Quantum Number, the subshell or angular dependence of the orbital. (Θ in spherical coordinates)
-           (numpy array) r - Variable Radius Coordinate for plot
-           
-Output: A numpy array of the radial contribution to the wavefunction
-"""
+# Computes the Radial Contribution of the Wavefunction Using Exponential Decay, Laguerre Polynomials, and Power Term
+#
+# Arguments: (int) n - Principal Quantum Number, the energy level or shell. (r in spherical coordinates)
+#            (int) l - Angular Momentum Quantum Number, the subshell or angular dependence of the orbital. (Θ in spherical coordinates)
+#            (numpy array) r - Variable Radius Coordinate for plot
+#            
+# Output: (numpy array) of the radial contribution to the wavefunction
 def radial_Contribution(n, l, r):
     
     e = np.e
@@ -30,15 +33,14 @@ def radial_Contribution(n, l, r):
 
     return squareRootTerm * powerOfLTerm * laguerreTerm(z * r) * decayTerm
 
-""" Computes the Angular Contribution of the Wavefunction Using Exponential Decay, Legendre Polynomials, and Power Term
+# Computes the Angular Contribution of the Wavefunction Using Exponential Decay, Legendre Polynomials, and Power Term
 
-Arguments: (int) l - Angular Momentum Quantum Number, the subshell or angular dependence of the orbital. (Θ in spherical coordinates)
-           (int) ml - Magnetic Quantum Number, the orientation in space of an orbital (ϕ in spherical coordinates)
-           (numpy array) theta - Variable Polar Angle Coordinate for plot
-           (numpy array) phi - Variable Azimuth Angle Coordinate for plot
-           
-Output: A numpy array of the angular contribution (spherical harmonics) of the wavefunction
-"""
+# Arguments: (int) l - Angular Momentum Quantum Number, the subshell or angular dependence of the orbital. (Θ in spherical coordinates)
+#            (int) ml - Magnetic Quantum Number, the orientation in space of an orbital (ϕ in spherical coordinates)
+#            (numpy array) theta - Variable Polar Angle Coordinate for plot
+#            (numpy array) phi - Variable Azimuth Angle Coordinate for plot
+#           
+# Output: (numpy array) of the angular contribution (spherical harmonics) of the wavefunction
 def angular_Contribution(l, ml, theta, phi):
 
     e = np.e
@@ -59,42 +61,58 @@ def angular_Contribution(l, ml, theta, phi):
 
     return negPosTerm * sqaureRootTerm * legendreTerm * decayTerm
     
-""" Computes the total complex wavefunction from the calculated angular_Contribution and radial_Contribution
-
-Arguments: (int) n - Principal Quantum Number, the energy level or shell. (r in spherical coordinates)
-           (int) l - Angular Momentum Quantum Number, the subshell or angular dependence of the orbital. (Θ in spherical coordinates) 
-           (int) ml - Magnetic Quantum Number, the orientation in space of an orbital (ϕ in spherical coordinates)
-
-Output: A COMPLEX numpy array of the total wavefunction
-"""
-
+# Computes the total complex wavefunction from the calculated angular_Contribution and radial_Contribution
+#
+# Arguments: (int) n - Principal Quantum Number, the energy level or shell. (r in spherical coordinates)
+#            (int) l - Angular Momentum Quantum Number, the subshell or angular dependence of the orbital. (Θ in spherical coordinates) 
+#            (int) ml - Magnetic Quantum Number, the orientation in space of an orbital (ϕ in spherical coordinates)
+#            **IMPORTANT, with converting r, theta, phi to their respective cartesian coordinates. We must consider all possible values of r, Θ, ϕ.
+#            *Note, x,y,z linspaces are set from the global constants
+#          
+# Output: COMPLEX (numpy array) of the total wavefunction
 def complex_Wave_Function(n, l, ml):     
 
     pi = np.pi
 
-    num_points = 680
-    r = np.linspace(0, 2, num_points)
-    theta = np.linspace(0, 2 * pi, num_points)
-    phi = np.linspace(0, pi, num_points)
-    
-    theta, phi = np.meshgrid(theta, phi)
+    x = y = z = np.linspace(-extent, extent, num_points)
+    x, y = np.meshgrid(x, y)
+
+    magnitude = np.sqrt((x ** 2) + (y ** 2) + (z ** 2))
+    r = magnitude
+    theta = np.arctan(y / x)
+    phi = np.arccos(z / magnitude)
 
     radial = radial_Contribution(n, l, r)
     angular = angular_Contribution(l, ml, theta, phi)
 
     psi = radial * angular
-
+    
     return psi
     
+# Computes the probability density of any given wavefunction set as z for future plot
+#
+# Arguments: (numpy array) psi - A COMPLEX numpy array describing the total wavefunction  
+# 
+# Output: REAL (numpy array) of the probability density
 def probability_Density(psi):
 
     return (np.abs(psi) ** 2)
 
-def main_Plot(P):
-    
-    plt.imshow(P, interpolation='none')
+# Plots any given REAL function including probability density P on a 3D contour graph
+#
+# Arguments: (numpy array) P - A REAL numpy array describing the total function  
+# 
+# Output: A final plot of the given function
+def main_Plot_Wavefunction(P):
+
+    x = y = np.linspace(-extent, extent, num_points)
+    x, y = np.meshgrid(x, y)
+    z = P
+
+    fig = plt.figure()
+    ax = plt.axes(projection = '3d')
+    ax.contour(x, y, z, 50, cmap='magma')
+
     plt.show()
 
-main_Plot(probability_Density(complex_Wave_Function(2,1,1)))
-
-    
+main_Plot_Wavefunction(probability_Density(complex_Wave_Function(3,2,1)))
