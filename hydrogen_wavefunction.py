@@ -50,6 +50,8 @@ def angular_Contribution(l, ml, theta, phi):
 
     #Needed to ensure calculation for -l
     absML = np.abs(ml)
+    #Needed to ensure calculation for -l
+    absML = np.abs(ml)
     sqaureRootTerm = np.sqrt(
                             (((2 * l) + 1)/(4 * pi)) *
                             ((np.math.factorial(l - absML))/(np.math.factorial(l + absML)))
