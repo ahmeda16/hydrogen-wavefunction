@@ -29,6 +29,10 @@ If you already have the basis knowledge down you may skip this section as it is 
 
 
 
+### 2.4 Legendre Polynomials 
+
+
+
 ## 3. The Wavefunction 
 
 
