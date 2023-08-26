@@ -8,7 +8,9 @@ To execute the Python file, you must first follow these items, (1.1 Language). E
 | l              | 0 <= l < n    |
 | ml             | -l <= ml <= 1 |
 
-After execution, a 3D interactable figure will pop up via Matplotlib and will save a .png file within the respective Python file directory where ever that may be on your device. Figure examples are shown below for n = 2, l = 1, ml = 1:
+After execution, a 3D interactable figure will pop up via Matplotlib and will save a .png file within the respective Python file directory where ever that may be on your device. If the Wavefunction Plot is not within the bounds, try adjusting the Global Constants to a larger value by an addition of 500 for both. This portion is not automated, but will be in the future.
+
+Figure examples are shown below for n = 2, l = 1, ml = 1:
 
 <div align="center">
   <h3> Real Hydrogen Wavefunction </h3>
