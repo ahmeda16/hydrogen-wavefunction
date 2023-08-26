@@ -1,14 +1,22 @@
 # The Hydrogen Wavefunction & Electron Density Cloud Plot
 
-### Execution
+### Execution of File
 To execute the Python file, you must first follow these items, (1.1 Language). Execution is done through the Python terminal by entering your Quantum Numbers with set restrictions stated below.
 | Quantum Number | Limitations   |
 | -------------- | ------------- |
-| n              | n < 1         |
+| n              | n > 1         |
 | l              | 0 <= l < n    |
 | ml             | -l <= ml <= 1 |
 
-After execution, a 3D interactable figure will pop up via Matplotlib and will save a .png file within the respective Python file directory where ever that may be on your device. Figure example is shown below,
+After execution, a 3D interactable figure will pop up via Matplotlib and will save a .png file within the respective Python file directory where ever that may be on your device. Figure examples are shown below for n = 2, l = 1, ml = 1:
+
+<div align="center">
+  <h3> Real Hydrogen Wavefunction </h3>
+  <img src="Example_211_Real.png" />
+  
+  <h3> Complex Hydrogen Wavefunction </h3>
+  <img src="Example_211_Complex.png" />
+</div>
 
 ## 1. Pre-requisites
 
