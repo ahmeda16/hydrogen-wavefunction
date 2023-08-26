@@ -4,7 +4,7 @@
 To execute the Python file, you must first follow these items, (1.1 Language). Execution is done through the Python terminal by entering your Quantum Numbers with set restrictions stated below.
 | Quantum Number | Limitations   |
 | -------------- | ------------- |
-| n              | n > 1         |
+| n              | n >= 1        |
 | l              | 0 <= l < n    |
 | ml             | -l <= ml <= l |
 
