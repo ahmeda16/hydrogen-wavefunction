@@ -3,9 +3,13 @@ import scipy as sp
 from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-#GLOBAL CONSTANTS
+n =  int(input('Enter an n Quantum Number: '))
+l = int(input('Enter an l Quantum Number: '))
+ml = int(input('Enter an ml Quantum Number: '))
+
+#GLOBAL CONSTANTS (ADJUST IF NECESSARY)
 num_points = 680
-extent = 680
+extent = 480
 
 # Computes the Radial Contribution of the Wavefunction Using Exponential Decay, Laguerre Polynomials, and Power Term
 #
@@ -72,6 +76,15 @@ def angular_Contribution(l, ml, theta, phi):
 # Output: COMPLEX (numpy array) of the total wavefunction
 def complex_Wave_Function(n, l, ml):     
 
+    if (not isinstance(n, int)) or (n < 1):
+        raise ValueError('Quantum Number Error: n shall be part of the Natural Set (n >= 1)')
+
+    if (not isinstance(l, int)) or not (0 <= l < n):
+        raise ValueError('Quantum Number Error: l shall be part of the Positive Integer Set and Satisfy (0 <= l < n)')
+    
+    if (not isinstance(ml, int)) or not (-l <= ml <= l):
+        raise ValueError('Quantum Number Error: ml shall be part of the Integer Set and Satisfy (-l <= ml <= l)')
+
     pi = np.pi
 
     x = y = z = np.linspace(-extent, extent, num_points)
@@ -101,9 +114,10 @@ def probability_Density(psi):
 # Plots any given REAL function including probability density P on a 3D contour graph
 #
 # Arguments: (numpy array) P - A REAL numpy array describing the total function  
+#            (string) text - A title formatter for Real, Complex, or Probability Density Plot
 # 
 # Output: A final plot of the given function
-def main_Plot_Wavefunction(P):
+def main_Plot_Wavefunction(P, text):
 
     x = y = np.linspace(-extent, extent, num_points)
     x, y = np.meshgrid(x, y)
@@ -111,8 +125,22 @@ def main_Plot_Wavefunction(P):
 
     fig = plt.figure()
     ax = plt.axes(projection = '3d')
+    plt.title("Hydrogen Wavefunction " + text + "$ \psi_{(n,ℓ,m_ℓ)}$")
+    ax.set_xlabel('$x$', fontsize=20, rotation=150)
+    ax.set_ylabel('$y$', fontsize=20, rotation=0)
+    ax.set_zlabel('$\psi_{(n,ℓ,m_ℓ)}$', fontsize=20, rotation=150)
+    
     ax.contour(x, y, z, 50, cmap='magma')
 
+    plt.savefig(f'({n},{l},{ml})[{text}].png')
     plt.show()
 
-main_Plot_Wavefunction(probability_Density(complex_Wave_Function(3,2,1)))
+
+#Real Plot
+main_Plot_Wavefunction(np.real(complex_Wave_Function(n, l, ml)), 'Real')
+
+#Complex Plot
+main_Plot_Wavefunction(np.imag(complex_Wave_Function(n, l, ml)), 'Complex')
+
+#Probability Density Plot
+main_Plot_Wavefunction(np.imag(complex_Wave_Function(n, l, ml)), 'Probability Density')
