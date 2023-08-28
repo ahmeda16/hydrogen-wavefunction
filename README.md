@@ -6,11 +6,11 @@ To execute the Python file, you must first follow these items, (1.1 Language). E
 | -------------- | ----------------------- |
 | $$n$$          | $$n \geq  1$$           |
 | $$ℓ$$          | $$0 \leq  l \lt  n$$    |
-| $$m_ℓ$$        | $$-ℓ \leq ml \leq ℓ$$   |
+| $$m_ℓ$$        | $$-ℓ \leq m_ℓ \leq ℓ$$   |
 
 After execution, a 3D interactable figure will pop up via Matplotlib and will save a .png file within the respective Python file directory where ever that may be on your device. If the Wavefunction Plot is not within the bounds, try adjusting the Global Constants to a larger value by an addition of 500 for both. This portion is not automated, but will be in the future.
 
-Figure examples are shown below for: $$n = 2, l = 1, m_ℓ = 1$$:
+Figure examples are shown below for: $n = 2, l = 1, m_ℓ = 1$
 
 <div align="center">
   <h3> Real Hydrogen Wavefunction </h3>
@@ -42,26 +42,27 @@ If you already have the basis knowledge down you may skip this section as it is 
 #### 2.1.1 Spherical Coordinates 
 Spherical Coordinates is formally defined to be a coordinate system for an n-dimension Euclidean space where $(n = 3)$ with the following parameters:
 
-$$r,ρ \left \{ 0 \leq r,ρ \right \}$$ 1) The Radial Distance (radius, or radial coordinate), being the distance from the origin to the point as a straight line (magnitude).
+1) The Radial Distance (radius, or radial coordinate), being the distance from the origin to the point as a straight line (magnitude). $$r,ρ \left \( 0 \leq r,ρ \right \)$$ 
 
-$$\theta \left \{ 0 \leq \theta \lt 2\pi \right \}$$ 2) The Polar Angle, being the angle (typically in radians) from the x - axis, counter clockwise stopping at the xy projection of r.
+2) The Polar Angle, being the angle (typically in radians) from the x - axis, counter clockwise stopping at the xy projection of r. $$\theta \left \( 0 \leq \theta \lt 2\pi \right \)$$ 
 
-$$\phi \left \{ 0 \leq \phi  \leq \pi \right \}$$ 3) The Azimuth Angle, being the angle (typically in radians) from the z - axis, being the direct angle stopping at r.
+3) The Azimuth Angle, being the angle (typically in radians) from the z - axis, being the direct angle stopping at r. $$\phi \left \( 0 \leq \phi  \leq \pi \right \)$$
 
 <div align="center">
   <h3> Spherical Coordinate Definition </h3>
-  <img src="https://tutorial.math.lamar.edu/classes/calciii/SphericalCoords_Files/image001.png" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Sphericalcoordinates.svg/280px-Sphericalcoordinates.svg.png" />
 </div>
 
-Note: that theta ($\theta$) and phi ($\phi$) could be defined in either order (theta being phi and vice versa). This is up to the discretion of whoever is applying it. For this case it will be hard defined as stated above.
+Note: that theta ($\theta$) and phi ($\phi$) could be defined in either order (theta being phi and vice versa). This is up to the discretion of whoever is applying it. For this case, it will be hard defined as stated above.
 
 The direct translation from Cartesian to Spherical is as follows:
-$$ r,ρ = \sqrt{x^2 + y^2 + z^2} $$
-$$ \theta = \arctan{\frac{y}{x}} $$
-$$ \phi = \arccos{\frac{z}{\sqrt{x^2 + y^2 + z^2}}} $$
+$$r,ρ = \sqrt{x^2 + y^2 + z^2}$$
+$$\theta = \arctan{\frac{y}{x}}$$
+$$\phi = \arccos{\frac{z}{\sqrt{x^2 + y^2 + z^2}}}$$
 
 All in all, the Spherical Coordinate System is another way of plotting any particular point in 3D space rather than using the Cartesian Coordinate System $(x, y, z)$. Spherical coordinates has many advantages over the Cartesian Coordinate System as it applies for the wavefunction which will be discussed further. 
 
+An excellent resource on Spherical Coordinates is linked here from Paul's Online Notes: https://tutorial.math.lamar.edu/classes/calciii/SphericalCoords.aspx
 ### 2.2 Quantum Mechanics 
 
 
@@ -82,11 +83,11 @@ All in all, the Spherical Coordinate System is another way of plotting any parti
 
 
 
-#### 3.1.x Atomic Orbitals
+#### 3.1.1 Atomic Orbitals
 
 
 
-#### 3.1.x Quantum Numbers
+#### 3.1.2 Quantum Numbers
 
 
 
@@ -94,15 +95,15 @@ All in all, the Spherical Coordinate System is another way of plotting any parti
 
 ### $$\psi_{(n,ℓ,m_ℓ)} = R_{n,ℓ}(r)\times Y_{ℓ,m_ℓ}(\theta,\phi)$$
 
-#### 3.2.x Radial Contribution
+#### 3.2.1 Radial Contribution
 
 #### $$R_{(n,ℓ)}(r) = \sqrt{\left(\frac{2}{na_0}\right)^{3}\frac{(n-ℓ-1)!}{2n(n+1)!}}\left(\frac{2r}{na_0}\right)^{ℓ} L_{n-ℓ-1}^{2ℓ+1}\left(\frac{2r}{na_0}\right)e^{-\frac{r}{na_0}}$$
 
-#### 3.2.x Angular Contribution 
+#### 3.2.2 Angular Contribution 
 
 #### $$Y_{ℓ}^{m_ℓ}(θ,ϕ) = (-1)^{m_ℓ} \sqrt{\left(\frac{2ℓ+1}{4π}\right)\frac{(ℓ-m_ℓ)!}{(ℓ+m_ℓ)!}}P_{ℓ}^{m_ℓ}(cos(θ))e^{im_ℓϕ}$$
 
-#### 3.2.x Probability Density
+#### 3.2.3 Probability Density
 
 #### $$P(r,\theta,\phi) = |\psi_{(n,ℓ,m_ℓ)}(r,\theta,\phi)|^2$$
 
