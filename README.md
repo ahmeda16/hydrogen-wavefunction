@@ -35,7 +35,7 @@ As the topic of the electron cloud density is complex to calculate, a foundation
 
 
 ## 2. Foundation Explanation
-If you already have the basis knowledge down you may skip this section as it is a revision and explanation portion. Only necessary ideas will be conveyed in this section. Resources will be provided as per section explanation.
+If you already have the basis knowledge down you may skip this section as it is a revision and explanation portion. Only necessary ideas will be conveyed in this section, assuming you have the foundation in algebra and function analysis. Resources will be provided as per section explanation.
 
 ### 2.1 Multivariable Calculus 
 
@@ -62,9 +62,15 @@ $$\phi = \arccos{\frac{z}{\sqrt{x^2 + y^2 + z^2}}}$$
 
 All in all, the Spherical Coordinate System is another way of plotting any particular point in 3D space rather than using the Cartesian Coordinate System $(x, y, z)$. Spherical coordinates has many advantages over the Cartesian Coordinate System as it applies for the wavefunction which will be discussed further. 
 
-An excellent resource on Spherical Coordinates is linked here from Paul's Online Notes: https://tutorial.math.lamar.edu/classes/calciii/SphericalCoords.aspx
-### 2.2 Quantum Mechanics 
+Due note that the possibility of a function may be in terms of Spherical Parameters rather than Cartesian Parameters.
 
+An excellent resource on Spherical Coordinates is linked here from Paul's Online Notes: https://tutorial.math.lamar.edu/classes/calciii/SphericalCoords.aspx
+
+### 2.2 Quantum Mechanics 
+Quantum Mechanics expresses the theory that describes the physical nature of atoms and subatomic particles. A key feature about this theory is that rather than determining the location, momentum, or other physical propteries of the particle(s) in a specified system with extreme certainty. It is determined with a probability instead. 
+
+#### 2.2.1 Schrödinger Equation 
+The Schrödinger Equation was formed by Erwin Schrödinger. 
 
 
 ### 2.3 Laugerre Polynomials 
