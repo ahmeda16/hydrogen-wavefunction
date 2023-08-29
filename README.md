@@ -182,13 +182,13 @@ Some important clarification notes are,
 
 #### $$Y_{ℓ}^{m_ℓ}(θ,ϕ) = (-1)^{m_ℓ} \sqrt{\left(\frac{2ℓ+1}{4π}\right)\frac{(ℓ-m_ℓ)!}{(ℓ+m_ℓ)!}}P_{ℓ}^{m_ℓ}(cos(θ))e^{im_ℓϕ}$$
 
-#### 3.2.4 Probability Density
-
-#### $$P(r,\theta,\phi) = |\psi_{(n,ℓ,m_ℓ)}(r,\theta,\phi)|^2$$
-
 Some important clarification notes are,
 1. $e^{im_ℓ \phi}$ is the complex decay term. This results the total solution including a complex number.
 2. $P$ being the Legendre polynomials with the set bounds stated.
+
+#### 3.2.4 Probability Density
+
+#### $$P(r,\theta,\phi) = |\psi_{(n,ℓ,m_ℓ)}(r,\theta,\phi)|^2$$
 
 ## 4. References
 #### [1] Martin Fränzl, Universität Leipzig, Molecular Nanophotonics Group, "The Hydrogen Atom" https://home.uni-leipzig.de/~physik/sites/mona/wp-content/uploads/sites/3/2017/12/Hydrogen_Atom.pdf
