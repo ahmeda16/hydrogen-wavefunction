@@ -2,11 +2,16 @@
 
 ### Execution of File
 To execute the Python file, you must first follow these items, (1.1 Language). Execution is done through the Python terminal by entering your quantum numbers with set restrictions stated below.
-| Quantum Number | Limitations             |
-| -------------- | ----------------------- |
-| $$n$$          | $$n \geq  1$$           |
-| $$ℓ$$          | $$0 \leq  l \lt  n$$    |
-| $$m_ℓ$$        | $$-ℓ \leq m_ℓ \leq ℓ$$  |
+
+<div align="center">
+  
+| Quantum Number | Limitations                                 |
+| -------------- | ------------------------------------------- |
+| $$n$$          | $$n \geq  1$$                               |
+| $$ℓ$$          | $$0 \leq  l \lt  n$$                        |
+| $$m_ℓ$$        | $$-ℓ \leq m_ℓ \leq ℓ$$                      |
+
+</div>
 
 After execution, a 3D interactable figure will pop up via Matplotlib and will save a .png file within the respective Python file directory where ever that may be on your device. If the Wavefunction Plot is not within the bounds, try adjusting the Global Constants to a larger value by an addition of 500 for both. This portion is not automated, but will be in the future.
 
@@ -138,7 +143,7 @@ This is an equation relating the Hamiltonian Operator of n-th eigenfunction to t
 
 $$ \hat{H} = \frac{-\hbar^2}{2m}\nabla^2 +  V(x) $$
 
-as $$ \nabla^2 = \frac{\partial}{\partial x^2} $$
+as $$\nabla^2 = \frac{\partial}{\partial x^2}$$
 
 By a big leap through derivations, relations, and assumptions, we find the Partial Differential Equation of time independancy expressed below,
 
@@ -148,7 +153,7 @@ By more big leaps. Solving this equation by seperation of variables finds the fo
 
 $$ \Psi(x, t) = \psi(x)\tau(t) $$ $$ \tau(t) = Ae^{\frac{iEt}{\hbar}} $$ $$ \frac{-\hbar^2}{2m}\frac{\partial \psi}{\partial x^2} + V(x)\psi = E\psi$$
 
-By even more big leaps, we can now solve a particular $ \psi $, so that we can look for the Hydrogen Wavefunction equation in terms of quantum numbers as described in the next segment.
+By even more big leaps, we can now solve a particular $\psi$, so that we can look for the Hydrogen Wavefunction equation in terms of quantum numbers as described in the next segment.
 
 Note that due to the spherical symmetry of Hydrogen, we will consider Spherical Coordinates in terms of $(r,\theta,\phi)$ as parameters rather than $(x,y,z)$.
 
