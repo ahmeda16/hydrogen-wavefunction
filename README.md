@@ -112,7 +112,9 @@ Each quantum number has their respective limiation stated below,
 
 </div>
 
+For a general overview of the atomic structure and the quantum numbers. I would recommend watching Professor Dave Explains on the topic: https://www.youtube.com/watch?v=Aoi4j8es4gQ
 
+Note that for the probability density and the wavefunction in terms of quantum numbers, we will not consider the electron spin as it does not impose any general effect.
 ## 3. The Wavefunction for the Hydrogen Atom
 
 
@@ -158,20 +160,35 @@ By even more big leaps, we can now solve a particular $\psi$, so that we can loo
 Note that due to the spherical symmetry of Hydrogen, we will consider Spherical Coordinates in terms of $(r,\theta,\phi)$ as parameters rather than $(x,y,z)$.
 
 ### 3.2 Schrödinger Equation for the Hydrogen Wavefunction (Time Independant)
+For the following equations set below, please refer to the reference list stated after as they go in depth of attributing these equations.
+
+Please note that these equations are set for a strictly time independant assumption from the initial Partial Differential Equation above.
+
+
+
+#### 3.2.1 The Wavefunction as a product of the Radial and Angular Contributions.
 
 ### $$\psi_{(n,ℓ,m_ℓ)} = R_{n,ℓ}(r)\times Y_{ℓ,m_ℓ}(\theta,\phi)$$
 
-#### 3.2.1 Radial Contribution
+#### 3.2.2 Radial Contribution
 
 #### $$R_{(n,ℓ)}(r) = \sqrt{\left(\frac{2}{na_0}\right)^{3}\frac{(n-ℓ-1)!}{2n(n+1)!}}\left(\frac{2r}{na_0}\right)^{ℓ} L_{n-ℓ-1}^{2ℓ+1}\left(\frac{2r}{na_0}\right)e^{-\frac{r}{na_0}}$$
 
-#### 3.2.2 Angular Contribution 
+Some important clarification notes are,
+1. $a_0$ is the Bohr radius as a set constant
+2. $L$ being the Laguerre polynomials with the set bounds stated.
+
+#### 3.2.3 Angular Contribution 
 
 #### $$Y_{ℓ}^{m_ℓ}(θ,ϕ) = (-1)^{m_ℓ} \sqrt{\left(\frac{2ℓ+1}{4π}\right)\frac{(ℓ-m_ℓ)!}{(ℓ+m_ℓ)!}}P_{ℓ}^{m_ℓ}(cos(θ))e^{im_ℓϕ}$$
 
-#### 3.2.3 Probability Density
+#### 3.2.4 Probability Density
 
 #### $$P(r,\theta,\phi) = |\psi_{(n,ℓ,m_ℓ)}(r,\theta,\phi)|^2$$
+
+Some important clarification notes are,
+1. $e^{im_ℓ \phi}$ is the complex decay term. This results the total solution including a complex number.
+2. $P$ being the Legendre polynomials with the set bounds stated.
 
 ## 4. References
 #### [1] Martin Fränzl, Universität Leipzig, Molecular Nanophotonics Group, "The Hydrogen Atom" https://home.uni-leipzig.de/~physik/sites/mona/wp-content/uploads/sites/3/2017/12/Hydrogen_Atom.pdf
