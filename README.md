@@ -153,7 +153,11 @@ $$ i\hbar\frac{\partial\Psi}{\partial t} = \frac{-\hbar^2}{2m}\frac{\partial \Ps
 
 By more big leaps. Solving this equation by seperation of variables finds the following,
 
-$$ \Psi(x, t) = \psi(x)\tau(t) $$ $$ \tau(t) = Ae^{\frac{iEt}{\hbar}} $$ $$ \frac{-\hbar^2}{2m}\frac{\partial \psi}{\partial x^2} + V(x)\psi = E\psi$$
+$$\Psi(x, t) = \psi(x)\tau(t)$$ 
+
+$$\tau(t) = Ae^{\frac{iEt}{\hbar}}$$ 
+
+$$\frac{-\hbar^2}{2m}\frac{\partial \psi}{\partial x^2} + V(x)\psi = E\psi$$
 
 By even more big leaps, we can now solve a particular $\psi$, so that we can look for the Hydrogen Wavefunction equation in terms of quantum numbers as described in the next segment.
 
