@@ -1,12 +1,12 @@
 # The Hydrogen Wavefunction & Electron Density Cloud Plot
 
 ### Execution of File
-To execute the Python file, you must first follow these items, (1.1 Language). Execution is done through the Python terminal by entering your Quantum Numbers with set restrictions stated below.
+To execute the Python file, you must first follow these items, (1.1 Language). Execution is done through the Python terminal by entering your quantum numbers with set restrictions stated below.
 | Quantum Number | Limitations             |
 | -------------- | ----------------------- |
 | $$n$$          | $$n \geq  1$$           |
 | $$ℓ$$          | $$0 \leq  l \lt  n$$    |
-| $$m_ℓ$$        | $$-ℓ \leq m_ℓ \leq ℓ$$   |
+| $$m_ℓ$$        | $$-ℓ \leq m_ℓ \leq ℓ$$  |
 
 After execution, a 3D interactable figure will pop up via Matplotlib and will save a .png file within the respective Python file directory where ever that may be on your device. If the Wavefunction Plot is not within the bounds, try adjusting the Global Constants to a larger value by an addition of 500 for both. This portion is not automated, but will be in the future.
 
@@ -66,36 +66,91 @@ Due note that the possibility of a function may be in terms of Spherical Paramet
 
 An excellent resource on Spherical Coordinates is linked here from Paul's Online Notes: https://tutorial.math.lamar.edu/classes/calciii/SphericalCoords.aspx
 
-### 2.2 Quantum Mechanics 
-Quantum Mechanics expresses the theory that describes the physical nature of atoms and subatomic particles. A key feature about this theory is that rather than determining the location, momentum, or other physical propteries of the particle(s) in a specified system with extreme certainty. It is determined with a probability instead. 
-
-#### 2.2.1 Schrödinger Equation 
-The Schrödinger Equation was formed by Erwin Schrödinger. 
+### 2.2 Atomic Shape
+The shape of the atomic is depicted from different models of teachings in North America. We will be analyzing the higher format of energy levels, orbital axes, and formulation of quantum numbers. 
 
 
-### 2.3 Laugerre Polynomials 
+#### 2.2.1 Atomic Orbitals
+The orbitals describe differnet probability clouds around the nucleus of the atom. Finding these probability clouds will be discussed later on under the wavefunction but for now, we assume there is a set probability distributed around the nucleus. 
 
+Examples are shown below for a single electron in Hydrogen below,
 
-
-### 2.4 Legendre Polynomials 
-
-
-
-## 3. The Wavefunction 
+<div align="center">
+  <h3> Atomic Orbitals in Hydrogen </h3>
+  <img src="https://www.mathsisfun.com/physics/images/orbitals.svg" />
+</div>
 
 
 
-### 3.1 Atomic Shape
+#### 2.2.2 Quantum Numbers
+Four quantum numbers describe the movement and trajectory of an electron within the atom. With the Pauli Exclusion Principle, there are no pair of electrons that share the exact same quantum numbers. The quantum numbers and their limitations are stated below,
+
+1. $(n)$ - The Principal Quantum Number describes the principal electron shell as it shows the most probable distance from the nucleus. As we increase in $(n)$, the distance increases from the nucleus to the electron.
+
+2. $(ℓ)$ - The Angular Momentum Quantum Number describes the shape of an orbital which is the Angular Distribution.  Each $(ℓ)$ indicates a specific subshell $(s,p,d,f)$ each unique with their own shape respectively. $(ℓ)$
+
+3. ($m_ℓ$) - The Magnetic Quantum Number descirbes the number of orbitals and their respective orientation in space within a subshell. It is dependant on $(ℓ)$
+
+4. ($m_s$) - The Electron Spin Quantum Number describes the direction of the electron spin either being strictly either $(\frac{1}{2})$ or $(-\frac{1}{2})$. It is independant of the 3 other quantum numbers.
+
+Each quantum number has their respective limiation stated below,
+<div align="center">
+
+  <h3> Quantum Number Boundaries</h3>
+  
+| Quantum Number | Limitations                                 |
+| -------------- | ------------------------------------------- |
+| $$n$$          | $$n \geq  1$$                               |
+| $$ℓ$$          | $$0 \leq  l \lt  n$$                        |
+| $$m_ℓ$$        | $$-ℓ \leq m_ℓ \leq ℓ$$                      |
+| $$m_s$$        | $$-\frac{1}{2} \leq m_s \leq \frac{1}{2}$$  |
+
+</div>
 
 
-
-#### 3.1.1 Atomic Orbitals
-
+## 3. The Wavefunction for the Hydrogen Atom
 
 
-#### 3.1.2 Quantum Numbers
+### 3.1 Quantum Mechanics 
+Quantum Mechanics expresses the theory that describes the physical nature of atoms and subatomic particles. A key feature about this theory is that rather than determining the location, momentum, or other physical propteries of the particle(s) in a specified system with minimalisitc uncertainty. It is determined with a probability instead. 
+
+#### 3.1.1 Wavefunction
+
+$(\Psi)$ represents the Quantum State of any particle in a given system as it is used in the Schrödinger Equation. It contains all the informatin about the particle in question.
+
+Some restrictions are set as stated below,
+
+1. $(\Psi)$ and its partial derivative counterpart $(\frac{\partial\Psi(x)}{\partial x})$ must be continuous
+2. $(\Psi)$ must be a solution to the Schrödinger Equation
+3. $(\Psi)$ must be normalized. 
+$\lim_{x \to \infty} (\Psi) = 0$
+
+#### 3.1.2 Probability Density
+By evaluating $(|\Psi|^2)$. This gives the probability density function of finding the particle located in space. The resulting number showcases the probability of locating the particle at that point. 
 
 
+#### 3.1.3 Schrödinger Equation (Time Independant)
+The Schrödinger Equation was formed by Erwin Schrödinger. Considering the eigenvalue equation below,
+
+$$ \hat{H}\Psi_n = E_n\Psi_n $$
+
+This is an equation relating the Hamiltonian Operator of n-th eigenfunction to the Energy eigenvalue. Note that the Hamiltonian Operator takes in account of the Potential Energy and Kinetic Energy of the system as expressed below,
+
+$$ \hat{H} = \frac{-\hbar^2}{2m}\nabla^2 +  V(x) $$
+
+as $$ \nabla^2 = \frac{\partial}{\partial x^2} $$
+
+By a big leap through derivations, relations, and assumptions, we find the Partial Differential Equation of time independancy expressed below,
+
+$$ i\hbar\frac{\partial\Psi}{\partial t} = \frac{-\hbar^2}{2m}\frac{\partial \Psi}{\partial x^2} + V(x)\Psi $$
+
+By more big leaps. Solving this equation by seperation of variables finds the following,
+
+$$ \Psi(x, t) = \psi(x)\tau(t) $$ $$ \tau(t) = Ae^{\frac{iEt}{\hbar}} $$ $$ \frac{-\hbar^2}{2m}\frac{\partial \psi}{\partial x^2} + V(x)\psi = E\psi$$
+
+By even more big leaps, we can now solve a particular $ \psi $, so that we can look for the Hydrogen Wavefunction equation in terms of quantum numbers as described in the next segment.
+
+Note that due to the spherical symmetry of Hydrogen, we will consider Spherical Coordinates in terms of $(r,\theta,\phi)$ as parameters rather than $(x,y,z)$.
 
 ### 3.2 Schrödinger Equation for the Hydrogen Wavefunction (Time Independant)
 
