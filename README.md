@@ -1,7 +1,7 @@
 # The Hydrogen Wavefunction & Electron Density Cloud Plot
 
 ### Execution of File
-To execute the Python file, you must first follow these items, (1.1 Language). Execution is done through the Python terminal by entering your quantum numbers with set restrictions stated below.
+##### Follow the Jupyter file on the explanation of how to execute the file. Restrictions are applied as stated below,
 
 <div align="center">
   
@@ -12,9 +12,6 @@ To execute the Python file, you must first follow these items, (1.1 Language). E
 | $$m_ℓ$$        | $$-ℓ \leq m_ℓ \leq ℓ$$                      |
 
 </div>
-
-After execution, a 3D interactable figure will pop up via Matplotlib and will save a .png file within the respective Python file directory where ever that may be on your device. If the Wavefunction Plot is not within the bounds, try adjusting the Global Constants to a larger value by an addition of 500 for both. This portion is not automated, but will be in the future.
-
 Figure examples are shown below for: $n = 2, l = 1, m_ℓ = 1$
 
 <div align="center">
