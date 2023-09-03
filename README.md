@@ -1,7 +1,7 @@
 # The Hydrogen Wavefunction & Electron Density Cloud Plot
 
 ### Execution of File
-To execute the Python file, you must first follow these items, (1.1 Language). Execution is done through the Python terminal by entering your quantum numbers with set restrictions stated below.
+##### Follow the Jupyter file on the explanation of how to execute the file. Restrictions are applied as stated below,
 
 <div align="center">
   
@@ -12,9 +12,6 @@ To execute the Python file, you must first follow these items, (1.1 Language). E
 | $$m_ℓ$$        | $$-ℓ \leq m_ℓ \leq ℓ$$                      |
 
 </div>
-
-After execution, a 3D interactable figure will pop up via Matplotlib and will save a .png file within the respective Python file directory where ever that may be on your device. If the Wavefunction Plot is not within the bounds, try adjusting the Global Constants to a larger value by an addition of 500 for both. This portion is not automated, but will be in the future.
-
 Figure examples are shown below for: $n = 2, l = 1, m_ℓ = 1$
 
 <div align="center">
@@ -65,7 +62,7 @@ $$r,ρ = \sqrt{x^2 + y^2 + z^2}$$
 $$\theta = \arctan{\frac{y}{x}}$$
 $$\phi = \arccos{\frac{z}{\sqrt{x^2 + y^2 + z^2}}}$$
 
-All in all, the Spherical Coordinate System is another way of plotting any particular point in 3D space rather than using the Cartesian Coordinate System $(x, y, z)$. Spherical coordinates has many advantages over the Cartesian Coordinate System as it applies for the wavefunction which will be discussed further. 
+The Spherical Coordinate System is another way of plotting any particular point in 3D space rather than using the Cartesian Coordinate System $(x, y, z)$. Spherical coordinates has many advantages over the Cartesian Coordinate System as it applies for the wavefunction which will be discussed further. 
 
 Due note that the possibility of a function may be in terms of Spherical Parameters rather than Cartesian Parameters.
 
@@ -76,7 +73,7 @@ The shape of the atomic is depicted from different models of teachings in North 
 
 
 #### 2.2.1 Atomic Orbitals
-The orbitals describe differnet probability clouds around the nucleus of the atom. Finding these probability clouds will be discussed later on under the wavefunction but for now, we assume there is a set probability distributed around the nucleus. 
+The orbitals describe different probability clouds around the nucleus of the atom. Finding these probability clouds will be discussed later on under the wavefunction but for now, we assume there is a set probability distributed around the nucleus. 
 
 Examples are shown below for a single electron in Hydrogen below,
 
@@ -88,7 +85,7 @@ Examples are shown below for a single electron in Hydrogen below,
 
 
 #### 2.2.2 Quantum Numbers
-Four quantum numbers describe the movement and trajectory of an electron within the atom. With the Pauli Exclusion Principle, there are no pair of electrons that share the exact same quantum numbers. The quantum numbers and their limitations are stated below,
+The four quantum numbers describe the movement and trajectory of an electron within the atom. With the Pauli Exclusion Principle, there are no pair of electrons that share the exact same quantum numbers. The quantum numbers and their limitations are stated below,
 
 1. $(n)$ - The Principal Quantum Number describes the principal electron shell as it shows the most probable distance from the nucleus. As we increase in $(n)$, the distance increases from the nucleus to the electron.
 
@@ -119,11 +116,11 @@ Note that for the probability density and the wavefunction in terms of quantum n
 
 
 ### 3.1 Quantum Mechanics 
-Quantum Mechanics expresses the theory that describes the physical nature of atoms and subatomic particles. A key feature about this theory is that rather than determining the location, momentum, or other physical propteries of the particle(s) in a specified system with minimalisitc uncertainty. It is determined with a probability instead. 
+Quantum Mechanics expresses the theory that describes the physical nature of atoms and subatomic particles. A key feature about this theory is that rather than determining the location, momentum, or other physical properties of the particle(s) in a specified system with minimal uncertainty. It is determined with a probability instead. 
 
 #### 3.1.1 Wavefunction
 
-$(\Psi)$ represents the Quantum State of any particle in a given system as it is used in the Schrödinger Equation. It contains all the informatin about the particle in question.
+$(\Psi)$ represents the Quantum State of any particle in a given system as it is used in the Schrödinger Equation. It contains all the information about the particle in question.
 
 Some restrictions are set as stated below,
 
@@ -153,18 +150,19 @@ $$ i\hbar\frac{\partial\Psi}{\partial t} = \frac{-\hbar^2}{2m}\frac{\partial \Ps
 
 By more big leaps. Solving this equation by seperation of variables finds the following,
 
-$$ \Psi(x, t) = \psi(x)\tau(t) $$ $$ \tau(t) = Ae^{\frac{iEt}{\hbar}} $$ $$ \frac{-\hbar^2}{2m}\frac{\partial \psi}{\partial x^2} + V(x)\psi = E\psi$$
+$$\Psi(x, t) = \psi(x)\tau(t)$$ 
+
+$$\tau(t) = Ae^{\frac{iEt}{\hbar}}$$ 
+
+$$\frac{-\hbar^2}{2m}\frac{\partial \psi}{\partial x^2} + V(x)\psi = E\psi$$
 
 By even more big leaps, we can now solve a particular $\psi$, so that we can look for the Hydrogen Wavefunction equation in terms of quantum numbers as described in the next segment.
 
-Note that due to the spherical symmetry of Hydrogen, we will consider Spherical Coordinates in terms of $(r,\theta,\phi)$ as parameters rather than $(x,y,z)$.
+Note that due to the spherical symmetry of Hydrogen, we will consider Spherical Coordinates in terms of $(r,\theta,\phi)$ as parameters rather than Cartesian Coordinates of $(x,y,z)$.
 
 ### 3.2 Schrödinger Equation for the Hydrogen Wavefunction (Time Independant)
 For the following equations set below, please refer to the reference list stated after as they go in depth of attributing these equations.
-
 Please note that these equations are set for a strictly time independant assumption from the initial Partial Differential Equation above.
-
-
 
 #### 3.2.1 The Wavefunction as a product of the Radial and Angular Contributions.
 
@@ -182,13 +180,13 @@ Some important clarification notes are,
 
 #### $$Y_{ℓ}^{m_ℓ}(θ,ϕ) = (-1)^{m_ℓ} \sqrt{\left(\frac{2ℓ+1}{4π}\right)\frac{(ℓ-m_ℓ)!}{(ℓ+m_ℓ)!}}P_{ℓ}^{m_ℓ}(cos(θ))e^{im_ℓϕ}$$
 
-#### 3.2.4 Probability Density
-
-#### $$P(r,\theta,\phi) = |\psi_{(n,ℓ,m_ℓ)}(r,\theta,\phi)|^2$$
-
 Some important clarification notes are,
 1. $e^{im_ℓ \phi}$ is the complex decay term. This results the total solution including a complex number.
 2. $P$ being the Legendre polynomials with the set bounds stated.
+
+#### 3.2.4 Probability Density
+
+#### $$P(r,\theta,\phi) = |\psi_{(n,ℓ,m_ℓ)}(r,\theta,\phi)|^2$$
 
 ## 4. References
 #### [1] Martin Fränzl, Universität Leipzig, Molecular Nanophotonics Group, "The Hydrogen Atom" https://home.uni-leipzig.de/~physik/sites/mona/wp-content/uploads/sites/3/2017/12/Hydrogen_Atom.pdf
