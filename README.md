@@ -20,6 +20,9 @@ Figure examples are shown below for: $n = 2, l = 1, m_ℓ = 1$
   
   <h3> Complex Hydrogen Wavefunction </h3>
   <img src="Example_211_Complex.png" />
+
+  <h3> Probability Density of Hydrogen Wavefunction </h3>
+  <img src="Example_211_Probability_Density.png" />
 </div>
 
 ## 1. Pre-requisites
