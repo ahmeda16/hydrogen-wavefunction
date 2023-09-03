@@ -143,4 +143,5 @@ main_Plot_Wavefunction(np.real(complex_Wave_Function(n, l, ml)), 'Real')
 main_Plot_Wavefunction(np.imag(complex_Wave_Function(n, l, ml)), 'Complex')
 
 #Probability Density Plot
-main_Plot_Wavefunction(np.imag(complex_Wave_Function(n, l, ml)), 'Probability Density')
+main_Plot_Wavefunction(probability_Density(complex_Wave_Function(n, l, ml)), 'Probability Density')
+
