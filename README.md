@@ -12,6 +12,7 @@
 | $$m_ℓ$$        | $$-ℓ \leq m_ℓ \leq ℓ$$                      |
 
 </div>
+
 Figure examples are shown below for: $n = 2, l = 1, m_ℓ = 1$
 
 <div align="center">
