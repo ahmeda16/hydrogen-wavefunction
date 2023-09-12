@@ -1,5 +1,8 @@
 # The Hydrogen Wavefunction & Electron Density Cloud Plot
 
+### Purpose
+#### With my instated love for Physics, I had wished for this project to be a reality with the recent release of Oppenheimer directed by Christopher Nolan. A marvelous film with amazing cinemotography shedding light on Quantum Mechanics and the world of Nuclear Physics.
+
 ### Execution of File
 ##### Follow the Jupyter file on the explanation of how to execute the file. Restrictions are applied as stated below,
 
