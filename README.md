@@ -151,11 +151,11 @@ $$ \hat{H} = \frac{-\hbar^2}{2m}\nabla^2 +  V(x) $$
 
 as $$\nabla^2 = \frac{\partial}{\partial x^2}$$
 
-By a big leap through derivations, relations, and assumptions, we find the Partial Differential Equation of time independancy expressed below,
+Through derivations, relations, and assumptions, we find the Partial Differential Equation of time independancy expressed below,
 
 $$ i\hbar\frac{\partial\Psi}{\partial t} = \frac{-\hbar^2}{2m}\frac{\partial \Psi}{\partial x^2} + V(x)\Psi $$
 
-By more big leaps. Solving this equation by seperation of variables finds the following,
+Solving this equation by seperation of variables finds the following,
 
 $$\Psi(x, t) = \psi(x)\tau(t)$$ 
 
@@ -163,7 +163,7 @@ $$\tau(t) = Ae^{\frac{iEt}{\hbar}}$$
 
 $$\frac{-\hbar^2}{2m}\frac{\partial \psi}{\partial x^2} + V(x)\psi = E\psi$$
 
-By even more big leaps, we can now solve a particular $\psi$, so that we can look for the Hydrogen Wavefunction equation in terms of quantum numbers as described in the next segment.
+We can now solve a particular $\psi$, so that we can look for the Hydrogen Wavefunction equation in terms of quantum numbers as described in the next segment.
 
 Note that due to the spherical symmetry of Hydrogen, we will consider Spherical Coordinates in terms of $(r,\theta,\phi)$ as parameters rather than Cartesian Coordinates of $(x,y,z)$.
 
@@ -173,11 +173,11 @@ Please note that these equations are set for a strictly time independant assumpt
 
 #### 3.2.1 The Wavefunction as a product of the Radial and Angular Contributions.
 
-### $$\psi_{(n,ℓ,m_ℓ)} = R_{n,ℓ}(r)\times Y_{ℓ,m_ℓ}(\theta,\phi)$$
+$$\psi_{(n,ℓ,m_ℓ)} = R_{n,ℓ}(r)\times Y_{ℓ,m_ℓ}(\theta,\phi)$$
 
 #### 3.2.2 Radial Contribution
 
-#### $$R_{(n,ℓ)}(r) = \sqrt{\left(\frac{2}{na_0}\right)^{3}\frac{(n-ℓ-1)!}{2n(n+1)!}}\left(\frac{2r}{na_0}\right)^{ℓ} L_{n-ℓ-1}^{2ℓ+1}\left(\frac{2r}{na_0}\right)e^{-\frac{r}{na_0}}$$
+$$R_{(n,ℓ)}(r) = \sqrt{\left(\frac{2}{na_0}\right)^{3}\frac{(n-ℓ-1)!}{2n(n+1)!}}\left(\frac{2r}{na_0}\right)^{ℓ} L_{n-ℓ-1}^{2ℓ+1}\left(\frac{2r}{na_0}\right)e^{-\frac{r}{na_0}}$$
 
 Some important clarification notes are,
 1. $a_0$ is the Bohr radius as a set constant
@@ -185,7 +185,7 @@ Some important clarification notes are,
 
 #### 3.2.3 Angular Contribution 
 
-#### $$Y_{ℓ}^{m_ℓ}(θ,ϕ) = (-1)^{m_ℓ} \sqrt{\left(\frac{2ℓ+1}{4π}\right)\frac{(ℓ-m_ℓ)!}{(ℓ+m_ℓ)!}}P_{ℓ}^{m_ℓ}(cos(θ))e^{im_ℓϕ}$$
+$$Y_{ℓ}^{m_ℓ}(θ,ϕ) = (-1)^{m_ℓ} \sqrt{\left(\frac{2ℓ+1}{4π}\right)\frac{(ℓ-m_ℓ)!}{(ℓ+m_ℓ)!}}P_{ℓ}^{m_ℓ}(cos(θ))e^{im_ℓϕ}$$
 
 Some important clarification notes are,
 1. $e^{im_ℓ \phi}$ is the complex decay term. This results the total solution including a complex number.
@@ -193,7 +193,7 @@ Some important clarification notes are,
 
 #### 3.2.4 Probability Density
 
-#### $$P(r,\theta,\phi) = |\psi_{(n,ℓ,m_ℓ)}(r,\theta,\phi)|^2$$
+$$P(r,\theta,\phi) = |\psi_{(n,ℓ,m_ℓ)}(r,\theta,\phi)|^2$$ 
 
 ## 4. References
 #### [1] Martin Fränzl, Universität Leipzig, Molecular Nanophotonics Group, "The Hydrogen Atom" https://home.uni-leipzig.de/~physik/sites/mona/wp-content/uploads/sites/3/2017/12/Hydrogen_Atom.pdf
